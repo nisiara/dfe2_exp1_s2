@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import { PageTitle} from "../components/common/Common";
 import { Input, Select, Radio, Button } from "../components/form/Form";
 
@@ -30,8 +30,26 @@ const AddCarPage = () => {
     setFullfilledForm(isFormValid)
   }
 
+  const INITIAL_STATE = data
+
+  function reducer(state ,action){
+    switch(action.type){
+      case 'ADD_CAR': {
+        const NEW_CAR = action.payload
+        return [...state, NEW_CAR]
+      }
+
+      default: 
+        return state
+    }
+  }
+
+  const [carList, dispatch] = useReducer(reducer, INITIAL_STATE)
+
   function handleOnSubmit(event){
     event.preventDefault()
+
+    dispatch({type: 'ADD_CAR', payload: newCar})
   }
   
   return (

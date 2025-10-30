@@ -6,9 +6,10 @@ import "./main.sass"
 import AboutUsPage from "./pages/AboutUsPage";
 import AddCarPage from "./pages/AddCarPage";
 
+
 const App = () => {
   return (
-    <main className="container">
+    <main className="container mx-auto">
       <Header/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
