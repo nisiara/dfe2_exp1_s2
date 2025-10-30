@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import CarTypePage from "./pages/CarTypePage";
 import "./main.sass"
 import AboutUsPage from "./pages/AboutUsPage";
+import AddCarPage from "./pages/AddCarPage";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/type/:type" element={<CarTypePage/>}/>
+        <Route path="/add-car" element={<AddCarPage/>} />
         <Route path="/about-us" element={<AboutUsPage/>} />
       </Routes>
     </main>
