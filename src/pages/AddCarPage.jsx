@@ -1,16 +1,16 @@
-import { useState, useReducer } from "react";
+import { useState } from "react";
 import { PageTitle} from "../components/common/Common";
 import { Input, Select, Radio, Button } from "../components/form/Form";
 
-const AddCarPage = () => {
+const AddCarPage = ({dispatch}) => {
 
-  const carTypes = ['car city', 'hatchback', 'sedan', 'suv', 'deportivo', 'crossover', 'familiar']
+  const carTypes = ['city car', 'hatchback', 'sedan', 'suv', 'deportivo', 'crossover', 'familiar']
   const carBrands = ['nissan', 'porshe', 'ford', 'toyota', 'tesla', 'honda', 'hyundai', 'volkswagen', 'mercedes benz', 'bmw', 'chevrolet', 'audi', 'mitsubishi', 'mazda', 'land rover', 'alfa romeo', 'volvo', 'kia']
   const combustible = ['gasolina', 'diesel', 'eléctrico', 'híbrido']
   const transmision = ['automática', 'manual', 'cvt']
 
   const INITIAL_FORM_STATE = {
-    id: Symbol(),
+    id: new Date().toDateString,
     modelo: '',
     marca: '',
     tipoCombustible: '',
@@ -30,26 +30,11 @@ const AddCarPage = () => {
     setFullfilledForm(isFormValid)
   }
 
-  const INITIAL_STATE = data
-
-  function reducer(state ,action){
-    switch(action.type){
-      case 'ADD_CAR': {
-        const NEW_CAR = action.payload
-        return [...state, NEW_CAR]
-      }
-
-      default: 
-        return state
-    }
-  }
-
-  const [carList, dispatch] = useReducer(reducer, INITIAL_STATE)
 
   function handleOnSubmit(event){
     event.preventDefault()
 
-    dispatch({type: 'ADD_CAR', payload: newCar})
+   dispatch({type: 'ADD_CAR', payload: formInputs})
   }
   
   return (

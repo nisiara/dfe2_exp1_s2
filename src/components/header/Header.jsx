@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-import data from "../../../public/data/data";
 import "./Header.sass"
-const Header = () => {
+const Header = ({carList}) => {
   
-  const carsByType = Object.groupBy(data, auto => auto.tipo);
+  const carsByType = Object.groupBy(carList, auto => auto.tipo);
   const carTypes = Object.keys(carsByType);
 
   return (

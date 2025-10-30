@@ -1,10 +1,9 @@
-import data from "../../../public/data/data";
 import "./CarList.sass"
 
-const CarList = ({carType}) => {
+const CarList = ({carList, carType}) => {
   const filteredCars = carType 
-    ? data.filter(car => car.tipo.toLowerCase() === carType.toLowerCase())
-    : data;
+    ? carList.filter(car => car.tipo.toLowerCase() === carType.toLowerCase())
+    : carList;
 
   return ( 
     <section className="car-list">

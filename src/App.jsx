@@ -1,3 +1,4 @@
+import { useReducer } from "react";
 import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
@@ -5,16 +6,33 @@ import CarTypePage from "./pages/CarTypePage";
 import "./main.sass"
 import AboutUsPage from "./pages/AboutUsPage";
 import AddCarPage from "./pages/AddCarPage";
+import data from "../public/data/data";
 
 
 const App = () => {
+  const STATE = data
+
+  function reducer(state ,action){
+    switch(action.type){
+      case 'ADD_CAR': {
+        const NEW_CAR = action.payload
+        return [...state, NEW_CAR]
+      }
+      default: 
+        return state
+    }
+  }
+  
+  const [carList, dispatch] = useReducer(reducer, STATE)
+  
+  
   return (
     <main className="container mx-auto">
-      <Header/>
+      <Header carList={carList}/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/type/:type" element={<CarTypePage/>}/>
-        <Route path="/add-car" element={<AddCarPage/>} />
+        <Route path="/type/:type" element={<CarTypePage carList={carList}/>}/>
+        <Route path="/add-car" element={<AddCarPage dispatch={dispatch}/>} />
         <Route path="/about-us" element={<AboutUsPage/>} />
       </Routes>
     </main>
