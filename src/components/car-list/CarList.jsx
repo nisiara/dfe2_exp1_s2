@@ -6,7 +6,7 @@ const CarList = ({carList, carType}) => {
     : carList;
 
   return ( 
-    <section className="car-list">
+    <div className="car-list">
       {filteredCars.length > 0 ? (
         filteredCars.map(car => (
           <article key={car.id} className="car-list__car">
@@ -18,7 +18,7 @@ const CarList = ({carList, carType}) => {
       ) : (
         <p>No se encontraron autos de tipo "{carType}"</p>
       )}
-    </section>
+    </div>
 
   );
 }

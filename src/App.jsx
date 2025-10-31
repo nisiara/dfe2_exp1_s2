@@ -22,15 +22,16 @@ const App = () => {
         return state
     }
   }
-  
+
   const [carList, dispatch] = useReducer(reducer, STATE)
   
   
   return (
-    <main className="container mx-auto">
-      <Header carList={carList}/>
+    <main className="container mx-auto px-4">
+      <Header/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
+        <Route path="/car-list" element={<CarTypePage carList={carList}/>} />
         <Route path="/type/:type" element={<CarTypePage carList={carList}/>}/>
         <Route path="/add-car" element={<AddCarPage dispatch={dispatch}/>} />
         <Route path="/about-us" element={<AboutUsPage/>} />
