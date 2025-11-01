@@ -10,7 +10,7 @@ const AddCarPage = ({dispatch}) => {
   const transmision = ['automática', 'manual', 'cvt']
 
   const INITIAL_FORM_STATE = {
-    id: new Date().toDateString,
+    id: new Date().toDateString(),
     modelo: '',
     marca: '',
     tipoCombustible: '',
@@ -33,8 +33,9 @@ const AddCarPage = ({dispatch}) => {
 
   function handleOnSubmit(event){
     event.preventDefault()
-
-   dispatch({type: 'ADD_CAR', payload: formInputs})
+    dispatch({type: 'ADD_CAR', payload: formInputs})
+    setFormInputs(INITIAL_FORM_STATE)
+    setFullfilledForm(false)
   }
   
   return (

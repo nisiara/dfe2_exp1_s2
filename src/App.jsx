@@ -3,7 +3,6 @@ import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
 import CarTypePage from "./pages/CarTypePage";
-import "./main.sass"
 import AboutUsPage from "./pages/AboutUsPage";
 import AddCarPage from "./pages/AddCarPage";
 import data from "../public/data/data";

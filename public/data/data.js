@@ -5,7 +5,7 @@ export default [
     marca: "Ford",
     tipoCombustible: "Gasolina",
     transmision: "Manual",
-    tipo: "Hatchback"
+    tipo: "hatchback"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export default [
     marca: "Toyota",
     tipoCombustible: "Híbrido",
     transmision: "Automática",
-    tipo: "Sedan"
+    tipo: "sedan"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export default [
     marca: "Tesla",
     tipoCombustible: "Eléctrico",
     transmision: "Automática",
-    tipo: "Sedan"
+    tipo: "sedan"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export default [
     marca: "Honda",
     tipoCombustible: "Gasolina",
     transmision: "CVT",
-    tipo: "Sedan"
+    tipo: "sedan"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export default [
     marca: "Hyundai",
     tipoCombustible: "Diésel",
     transmision: "Automática",
-    tipo: "SUV"
+    tipo: "suv"
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export default [
     marca: "Volkswagen",
     tipoCombustible: "Gasolina",
     transmision: "Manual",
-    tipo: "Hatchback"
+    tipo: "hatchback"
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export default [
     marca: "Mercedes-Benz",
     tipoCombustible: "Gasolina",
     transmision: "Automática",
-    tipo: "Sedan"
+    tipo: "sedan"
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export default [
     marca: "BMW",
     tipoCombustible: "Diésel",
     transmision: "Automática",
-    tipo: "SUV"
+    tipo: "suv"
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export default [
     marca: "Porsche",
     tipoCombustible: "Gasolina",
     transmision: "PDK",
-    tipo: "Deportivo"
+    tipo: "deportivo"
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export default [
     marca: "Chevrolet",
     tipoCombustible: "Gasolina",
     transmision: "Automática",
-    tipo: "SUV"
+    tipo: "suv"
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export default [
     marca: "Audi",
     tipoCombustible: "Gasolina",
     transmision: "Automática",
-    tipo: "Sedan"
+    tipo: "sedan"
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ export default [
     marca: "Mitsubishi",
     tipoCombustible: "Híbrido",
     transmision: "CVT",
-    tipo: "SUV"
+    tipo: "suv"
   },
   {
     id: 13,
@@ -105,7 +105,7 @@ export default [
     tipoCombustible: "Gasolina",
     kilometraje: 8000,
     transmision: "Manual",
-    tipo: "Deportivo"
+    tipo: "deportivo"
   },
   {
     id: 14,
@@ -118,7 +118,7 @@ export default [
     poseeDescuento: true,
     kilometraje: 110000,
     transmision: "CVT",
-    tipo: "Crossover"
+    tipo: "crossover"
   },
   {
     id: 15,
@@ -131,7 +131,7 @@ export default [
     poseeDescuento: true,
     kilometraje: 135000,
     transmision: "Manual",
-    tipo: "Hatchback"
+    tipo: "hatchback"
   },
   {
     id: 16,
@@ -143,7 +143,7 @@ export default [
     tipoCombustible: "Diésel",
     kilometraje: 32000,
     transmision: "Automática",
-    tipo: "SUV"
+    tipo: "suv"
   },
   {
     id: 17,
@@ -156,7 +156,7 @@ export default [
     poseeDescuento: true,
     kilometraje: 20000,
     transmision: "Automática",
-    tipo: "Sedan"
+    tipo: "sedan"
   },
   {
     id: 18,
@@ -168,7 +168,7 @@ export default [
     tipoCombustible: "Diésel",
     kilometraje: 55000,
     transmision: "Automática",
-    tipo: "Familiar"
+    tipo: "familiar"
   },
   {
     id: 19,
@@ -180,7 +180,7 @@ export default [
     tipoCombustible: "Gasolina",
     kilometraje: 1500,
     transmision: "Manual",
-    tipo: "Deportivo"
+    tipo: "deportivo"
   },
   {
     id: 20,
@@ -193,6 +193,6 @@ export default [
     poseeDescuento: true,
     kilometraje: 85000,
     transmision: "Manual",
-    tipo: "City Car"
+    tipo: "city car"
   }
 ]
