@@ -37,9 +37,9 @@ const Radio = ({label, input, onChange, name}) => {
   );
 }
 
-const Button = ({state, text}) => {
+const Button = ({state, text, onClick}) => {
   return ( 
-     <button disabled={state} className="disabled:opacity-35 w-96 mt-10 p-4 text-xs border rounded-md bg-slate-900 text-white uppercase font-medium">{text}</button>
+     <button onClick={onClick} disabled={state} className="disabled:opacity-35 w-96 mt-10 p-4 text-xs border rounded-md bg-slate-900 text-white uppercase font-medium">{text}</button>
    );
 }
 

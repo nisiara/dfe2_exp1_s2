@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PageTitle} from "../components/common/Common";
 import { Input, Select, Radio, Button } from "../components/form/Form";
+import { Link } from "react-router-dom";
 
 const AddCarPage = ({dispatch}) => {
 
@@ -20,6 +21,7 @@ const AddCarPage = ({dispatch}) => {
 
   const [formInputs, setFormInputs] = useState(INITIAL_FORM_STATE)
   const [fullfilledForm, setFullfilledForm] = useState(false)
+  const [addedCar, setAddedCar] = useState(false)
 
   function handleOnChange(event){
     const {name, value} = event.target
@@ -34,14 +36,20 @@ const AddCarPage = ({dispatch}) => {
   function handleOnSubmit(event){
     event.preventDefault()
     dispatch({type: 'ADD_CAR', payload: formInputs})
-    setFormInputs(INITIAL_FORM_STATE)
     setFullfilledForm(false)
+    handleAddedCar()
+  }
+
+  function handleAddedCar(){
+    const updatedAddedCar = !addedCar
+    setAddedCar(updatedAddedCar)
   }
   
   return (
     <section>
       <PageTitle title='Agregar Auto'/>
-      <form onSubmit={handleOnSubmit}>
+      {!addedCar ? (
+        <form onSubmit={handleOnSubmit}>
         <Input label='Modelo' type='text' name='modelo' onChange={handleOnChange}/>
         <Select label='Marca' name='marca' onChange={handleOnChange} options={carBrands}/>
         <Select label='Tipo' name='tipo' onChange={handleOnChange} options={carTypes}/>
@@ -49,6 +57,15 @@ const AddCarPage = ({dispatch}) => {
         <Radio label='Transmisíon' input={transmision} name="transmision" onChange={handleOnChange} />
         <Button state={!fullfilledForm} text='Agregar automovil'/>
       </form>
+      ) : (
+        <div className="bg-green-200 rounded-md px-5 py-2 text-green-900 w-3/5">
+          <p className="mb-2 text-center">
+            {`El auto marca: ${formInputs.marca} modelo: ${formInputs.modelo} se ha agregado con exito`} 
+          </p>
+          <Link to={`/type/${formInputs.tipo.toLowerCase()}`} className="font-semibold text-center">Revisalo aquí</Link>
+        </div>
+      )}
+      
     </section>
   );
 }
