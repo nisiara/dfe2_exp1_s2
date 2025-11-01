@@ -12,12 +12,12 @@ Aplicación web básica desarrollada con React la cual despliega un catálogo de
 
 ## 🛠️ Tecnologías utilizadas
 
-- React
-- React Router DOM v7.9.4
-- Tailwind 3.4.17
-- useState
-- useReducer
-- Vite
+- **React**: Libreria para crear Interfaces de Usuario.
+- **React Router DOM v7.9.4**: Libreria de enrutamiento para SPA
+- **Tailwind 3.4.17**: ''Utility first' Framework de CSS.
+- **useState**: Captura los datos del formulario.
+- **useReducer**: Almacena la lógica para interactuar con la data.
+- **Vite**: Herramienta para generar el proyecto con estructura básica.
 
 ## 📐 Estructura de rutas
 
@@ -27,7 +27,7 @@ Aplicación web básica desarrollada con React la cual despliega un catálogo de
 ## ⚙️ Componentes principales
 
 - **HomePage**: Página de inicio con imagen de la automotora.
-- **CarTypePage**: Página que recibe el parámetro de tipo y filtra los vehículos.
+- **CarTypePage**: Página que muestra la lista de vehículos.
 - **CarList**: Componente que lista los vehículos según el tipo recibido.
 - **AddCarPage**: Componente en donde se encapsula la lógica para agregar autos al catálogo.
 
